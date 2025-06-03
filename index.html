@@ -1,4 +1,9 @@
-<style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bugatti Bolide</title>
+  <style>
     /* Background Animation */
     body {
       margin: 0;
@@ -22,6 +27,7 @@
       font-weight: bold;
       color: #ffcc00;
       text-align: center;
+      margin-top: 0.5em;
       text-shadow:
         0 0 10px #ffcc00,
         0 0 20px #ffd700,
@@ -49,14 +55,16 @@
 
     header {
       background: rgba(16, 24, 32, 0.85);
-      padding: 2em 1em;
+      padding: 2em 1em 1em;
       border-bottom: 2px solid #ffcc00;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       color: #ddd;
       text-align: center;
+      margin-top: 0;
+      font-style: italic;
     }
 
     .image-section {
@@ -67,31 +75,51 @@
     .image-section img {
       max-width: 90%;
       border-radius: 10px;
-      box-shadow: 0 0 20px #222;
+      box-shadow: 0 0 30px #222;
+      transition: transform 0.3s ease;
+    }
+    .image-section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #ffcc00;
     }
 
     .content {
-      padding: 0 2em;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin: 2em;
-      border-radius: 12px;
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 2em;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.8);
     }
 
     .content h2 {
       color: #ffcc00;
+      margin-top: 0;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 0.3em;
+    }
+
+    .content p, .content ul {
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
     }
 
     .content ul {
-      list-style: square;
-      margin-left: 1.5em;
+      list-style: square inside;
+      padding-left: 0;
+    }
+
+    .content ul li {
+      margin-bottom: 0.7em;
     }
 
     footer {
       text-align: center;
-      padding: 1em;
+      padding: 1.2em;
       background: rgba(16, 24, 32, 0.85);
       color: #aaa;
-      margin-top: 3em;
+      margin-top: 4em;
+      font-size: 0.9em;
     }
 
     /* Back to Top Button */
@@ -99,8 +127,8 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      padding: 12px 18px;
-      font-size: 20px;
+      padding: 14px 20px;
+      font-size: 24px;
       border-radius: 50%;
       border: none;
       cursor: pointer;
@@ -109,8 +137,9 @@
       background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
       background-size: 400% 400%;
       animation: rainbow 6s ease infinite;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
       transition: opacity 0.4s;
+      z-index: 100;
     }
 
     @keyframes rainbow {
@@ -126,42 +155,81 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1 class="glow-title">Bugatti Bolide</h1>
     <p>Track-focused hypercar with extreme performance</p>
   </header>
 
-  <!-- Image Section -->
   <section class="image-section">
-    <img src="bolide.jpg" alt="Bugatti Bolide" />
+    <img src=https://sxdrv.com/images/677e89ebb8020.jpg/>
   </section>
 
-  <!-- Car Info Section -->
-  <section class="content">
-    <h2>About the Bolide</h2>
+  <section class="content" id="overview">
+    <h2>Overview</h2>
     <p>
-      The Bugatti Bolide is a high-performance concept car with a quad-turbo W16 engine.
-      Built purely for the track, it offers an unmatched power-to-weight ratio and radical aerodynamic design.
+      The Bugatti Bolide is a radical hypercar concept designed by Bugatti to push the limits of performance and aerodynamics. It is a lightweight, track-only car powered by a quad-turbocharged 8.0-liter W16 engine capable of producing 1,850 horsepower. This beast weighs just about 1,240 kilograms, resulting in an extraordinary power-to-weight ratio.
+    </p>
+  </section>
+
+  <section class="content" id="design">
+    <h2>Design and Aerodynamics</h2>
+    <p>
+      The Bolide features an aggressive aerodynamic package with a large rear wing, front splitter, and an underbody diffuser designed to generate massive downforce. Its body is made mostly of lightweight carbon fiber to reduce weight and improve handling. Every curve and vent has been optimized for airflow, cooling, and minimizing drag.
     </p>
     <ul>
-      <li>Engine: 8.0L W16 quad-turbo</li>
-      <li>Power: 1,850 HP</li>
-      <li>Top Speed: 310+ mph (claimed)</li>
-      <li>Weight: 1,240 kg</li>
-      <li>0-100 km/h: ~2.17 seconds</li>
+      <li>Ultra-lightweight carbon fiber monocoque chassis</li>
+      <li>Active aerodynamic elements to maximize downforce</li>
+      <li>Air intakes for engine and brake cooling</li>
+      <li>Large rear diffuser and rear wing for track stability</li>
     </ul>
   </section>
 
-  <!-- Footer -->
+  <section class="content" id="performance">
+    <h2>Performance</h2>
+    <p>
+      With 1,850 horsepower and a weight of just 1,240 kg, the Bolide offers mind-blowing acceleration and handling. Bugatti claims a top speed above 310 mph (500 km/h) and a 0-100 km/h time of approximately 2.17 seconds. It is purely designed for track domination.
+    </p>
+    <ul>
+      <li>Engine: 8.0L W16 quad-turbocharged</li>
+      <li>Power: 1,850 HP @ 7,000 rpm</li>
+      <li>Torque: 1,850 Nm (1,364 lb-ft)</li>
+      <li>0-100 km/h: ~2.17 seconds</li>
+      <li>Top Speed: 310+ mph (claimed)</li>
+      <li>Weight: 1,240 kg (2,734 lbs)</li>
+    </ul>
+  </section>
+
+  <section class="content" id="technology">
+    <h2>Technology and Features</h2>
+    <p>
+      The Bolide uses cutting-edge materials and tech:
+    </p>
+    <ul>
+      <li>Carbon fiber construction for ultimate strength and lightness</li>
+      <li>Advanced suspension system with adaptive dampers</li>
+      <li>High-performance brakes with carbon-ceramic discs</li>
+      <li>Lightweight racing seats and stripped interior for weight savings</li>
+      <li>Telemetry and track data logging for drivers</li>
+    </ul>
+  </section>
+
+  <section class="content" id="fun-facts">
+    <h2>Fun Facts</h2>
+    <ul>
+      <li>The Bolide's engine sound reportedly reaches up to 136 decibels, louder than a rock concert.</li>
+      <li>Its aerodynamic downforce can reach 1,800 kg at top speed — more than its own weight!</li>
+      <li>The car’s body panels are designed to be quickly removable for fast maintenance during track events.</li>
+      <li>The Bugatti Bolide uses specially developed racing tires to handle extreme speeds.</li>
+      <li>Though a concept, it has inspired Bugatti’s future hypercar direction and technology.</li>
+    </ul>
+  </section>
+
   <footer>
     <p>&copy; 2025 Bugatti Fans. All rights reserved.</p>
   </footer>
 
-  <!-- Back to Top Button -->
   <button id="backToTop" title="Back to top">↑</button>
 
-  <!-- JavaScript -->
   <script>
     const backToTopButton = document.getElementById("backToTop");
 
@@ -177,3 +245,5 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   </script>
+</body>
+</html>
