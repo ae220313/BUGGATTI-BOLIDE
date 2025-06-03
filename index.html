@@ -1,35 +1,123 @@
-<link rel="stylesheet" href="style.css" />
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #1a1a1a, #0d47a1, #1b5e20, #880e4f);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #fff;
+  line-height: 1.6;
+}
 
-  <!-- Header with animated title -->
-  <header>
-    <h1 class="glow-title">Bugatti Bolide</h1>
-    <p>Track-focused hypercar with extreme performance</p>
-  </header>
+/* Gradient background animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-  <section class="image-section">
-    <img src="bolide.jpg" alt="Bugatti Bolide" />
-  </section>
+/* Glowing Title Effect */
+.glow-title {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #ffcc00;
+  text-align: center;
+  text-shadow:
+    0 0 10px #ffcc00,
+    0 0 20px #ffd700,
+    0 0 30px #ffff33,
+    0 0 50px #ffaa00;
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
 
-  <section class="content">
-    <h2>About the Bolide</h2>
-    <p>
-      The Bugatti Bolide is a high-performance concept car with a quad-turbo W16 engine.
-      Built purely for the track, it offers an unmatched power-to-weight ratio and radical aerodynamic design.
-    </p>
-    <ul>
-      <li>Engine: 8.0L W16 quad-turbo</li>
-      <li>Power: 1,850 HP</li>
-      <li>Top Speed: 310+ mph (claimed)</li>
-      <li>Weight: 1,240 kg</li>
-      <li>0-100 km/h: ~2.17 seconds</li>
-    </ul>
-  </section>
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 10px #ffcc00,
+      0 0 20px #ffd700,
+      0 0 30px #ffff33,
+      0 0 50px #ffaa00;
+  }
+  100% {
+    text-shadow:
+      0 0 20px #fff700,
+      0 0 30px #ffff33,
+      0 0 40px #ffee00,
+      0 0 60px #ffbb00;
+  }
+}
 
-  <footer>
-    <p>&copy; 2025 Bugatti Fans. All rights reserved.</p>
-  </footer>
+header {
+  background: rgba(16, 24, 32, 0.85);
+  padding: 2em 1em;
+  border-bottom: 2px solid #ffcc00;
+}
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to top">↑</button>
+header p {
+  font-size: 1.2em;
+  color: #ddd;
+  text-align: center;
+}
 
-  <!-- Script for scroll behavior -->
+.image-section {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.image-section img {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #222;
+}
+
+.content {
+  padding: 0 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 2em;
+  border-radius: 12px;
+}
+
+.content h2 {
+  color: #ffcc00;
+}
+
+.content ul {
+  list-style: square;
+  margin-left: 1.5em;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background: rgba(16, 24, 32, 0.85);
+  color: #aaa;
+  margin-top: 3em;
+}
+
+/* Rainbow "Back to Top" Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 18px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: none;
+  color: white;
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  animation: rainbow 6s ease infinite;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  transition: opacity 0.4s;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#backToTop:hover {
+  opacity: 0.9;
+}
