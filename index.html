@@ -1,13 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bugatti Bolide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Background Animation */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Orbitron', sans-serif;
       background: linear-gradient(-45deg, #1a1a1a, #0d47a1, #1b5e20, #880e4f);
       background-size: 400% 400%;
       animation: gradientShift 15s ease infinite;
@@ -21,7 +22,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Glowing Title */
     .glow-title {
       font-size: 3.5em;
       font-weight: bold;
@@ -29,27 +29,21 @@
       text-align: center;
       margin-top: 0.5em;
       text-shadow:
-        0 0 10px #ffcc00,
-        0 0 20px #ffd700,
-        0 0 30px #ffff33,
-        0 0 50px #ffaa00;
+        0 0 5px #ffcc00,
+        0 0 10px #ffd700;
       animation: glowPulse 2s ease-in-out infinite alternate;
     }
 
     @keyframes glowPulse {
       0% {
         text-shadow:
-          0 0 10px #ffcc00,
-          0 0 20px #ffd700,
-          0 0 30px #ffff33,
-          0 0 50px #ffaa00;
+          0 0 5px #ffcc00,
+          0 0 10px #ffd700;
       }
       100% {
         text-shadow:
-          0 0 20px #fff700,
-          0 0 30px #ffff33,
-          0 0 40px #ffee00,
-          0 0 60px #ffbb00;
+          0 0 8px #ffee00,
+          0 0 12px #ffbb00;
       }
     }
 
@@ -78,6 +72,7 @@
       box-shadow: 0 0 30px #222;
       transition: transform 0.3s ease;
     }
+
     .image-section img:hover {
       transform: scale(1.05);
       box-shadow: 0 0 40px #ffcc00;
@@ -122,7 +117,6 @@
       font-size: 0.9em;
     }
 
-    /* Back to Top Button */
     #backToTop {
       position: fixed;
       bottom: 30px;
@@ -158,11 +152,11 @@
   <header>
     <h1 class="glow-title">Bugatti Bolide</h1>
     <p>Track-focused hypercar with extreme performance</p>
- https://news.dupontregistry.com/wp-content/uploads/2025/02/Snapinsta.app_479729979_18490077718017315_6541837606669724535_n_1080-1024x570.jpg
+    
   </header>
 
-   <section class="image-section">
-    <img src=https://sxdrv.com/images/677e89ebb8020.jpg/>
+  <section class="image-section">
+    <img src="https://sxdrv.com/images/677e89ebb8020.jpg" alt="Bugatti Bolide">
   </section>
 
   <section class="content" id="overview">
